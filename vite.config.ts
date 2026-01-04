@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/violin-lessons',
+  base: '/violine-lessons',
 })
