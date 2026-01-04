@@ -1,4 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import profileRumiImage from "../../assets/images/profile-rumi.jpg";
 
 export function ProfileSection() {
   return (
@@ -7,7 +8,7 @@ export function ProfileSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1765278498369-e4c9033125c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc2ljYWwlMjBtdXNpY2lhbiUyMHBlcmZvcm1lcnxlbnwxfHx8fDE3NjY4MDIyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={profileRumiImage}
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -17,34 +18,28 @@ export function ProfileSection() {
             <div　className="flex items-center gap-4 mb-6">
               <p className="text-neutral-500 mb-2">講師</p>
               <h2 className="font-serif font-bold">蔵川 瑠美</h2>
-                {/* <div className="w-[25vh] h-[25vh] rounded-lg overflow-hidden">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1649589244330-09ca58e4fa64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMHdvbWFufGVufDF8fHx8MTc2NzM5MTY5MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="蔵川 瑠美"
-                    className="w-full h-full object-cover"
-                  />
-                </div> */}
             </div>
             
             <div className="space-y-4 text-neutral-700">
               <p>
-                東京芸術大学音楽学部卒業。在学中より演奏活動を開始し、国内外のコンクールで数々の受賞歴を持つ。
+                広島交響楽団コンサートマスター<br />
+                K-BALLET Theater Orchestra Tokyoゲストコンサートミストレス
               </p>
               <p>
-                現在はソロリサイタル、室内楽、オーケストラとの共演など幅広く活動。繊細かつ情熱的な演奏で高い評価を得ている。
+                大阪府大阪市出身。
               </p>
               <p>
-                後進の指導にも力を入れており、初心者から音楽大学受験生まで幅広く指導を行っている。
+                東京藝術大学附属音楽高校、東京藝術大学卒業。<br />
+                2009年、22歳で日本センチュリー交響楽団にアシスタントコンサートマスターとして入団。<br />
+                2014年広島交響楽団のオーディションに合格し、過去最年少でコンサートマスターに就任。<br />
+                2018年ドイツに渡り、ライプツィヒ・ゲヴァントハウス管弦楽団コンサートマスターのヘンリック・ホッホシルト氏の元で研鑽を積む。<br />
+                2019年〜2020年広島文化学園大学非常勤講師を務める。<br />
+                東京でのリサイタルの他、地元大阪では室内楽を学ぶセミナー「Otonowa Concert」シリーズを積極的に企画開催している。<br />
+                広島交響楽団をはじめ各地のオーケストラに出演をする傍ら、後進やアマチュアオーケストラの指導にも力を入れている。<br />
+                2021年よりあおによし音楽コンクールの審査員を務める。<br />
+                私生活においては一児の母。<br />
+                これまでに若林暢、岡山潔、ジェラール・プーレ、松原勝也、田野倉雅秋の各氏に師事。<br />
               </p>
-            </div>
-
-            <div className="pt-4">
-              <h3 className="mb-4">主な受賞歴</h3>
-              <ul className="space-y-2 text-neutral-700">
-                <li>• 第〇〇回国際音楽コンクール 第1位</li>
-                <li>• 全日本学生音楽コンクール 第1位</li>
-                <li>• 〇〇音楽賞 受賞</li>
-              </ul>
             </div>
           </div>
         </div>

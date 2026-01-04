@@ -1,23 +1,24 @@
 import { Clock, MapPin, Users } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import LessonImage from "../../assets/images/lesson-gpt.png";
 
 const lessonPlans = [
   {
     id: 1,
     title: '個人レッスン',
-    description: "弾きたい曲をていねいに仕上げていくようなレッスン。オンラインも対応しております。",
+    description: "弾きたい曲をていねいに仕上げていきます。オンラインも対応しております。",
     price: '5,000円 / 1時間',
   },
   {
     id: 2,
     title: 'オーケストラの弓づけ、指づかい相談レッスン',
-    description: 'アマチュアオーケストラ等で活動されている方向け',
+    description: 'アマチュアオーケストラ等で活動されている方向け。',
     price: '5,000円 / 1時間',
   },
   {
     id: 3,
     title: '専門を目指す方の音楽高校・音大コース',
-    description: '音楽大学受験を目指す方向けの専門的な指導を行います',
+    description: '音楽大学受験を目指す方向けの専門的な指導を行います。',
     price: '応相談',
   },
 ];
@@ -34,7 +35,7 @@ export function LessonsSection() {
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="relative aspect-[16/10] overflow-hidden rounded-lg">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1758524944402-1903b38f848f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGxlc3NvbiUyMHRlYWNoaW5nfGVufDF8fHx8MTc2NjgwMjI3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={LessonImage}
               alt="Lesson"
               className="w-full h-full object-cover"
             />

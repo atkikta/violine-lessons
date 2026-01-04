@@ -6,7 +6,7 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 
 export function ContactSection() {
-  const [state, handleSubmit] = useForm("xxxxyyyyzzzzaaaabbb");
+  const [state, handleSubmit] = useForm("mrebydpw");
 
   return (
     <section id="contact" className="min-h-screen py-20 md:py-32 bg-neutral-50">
@@ -21,7 +21,7 @@ export function ContactSection() {
 
         {state.succeeded && (
           <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-            お問い合わせありがとうございます。内容を確認の上、3営業日以内にご返信いたします。
+            お問い合わせありがとうございます。内容を確認の上ご返信いたします。
           </div>
         )}
 
@@ -76,10 +76,10 @@ export function ContactSection() {
           </Button>
         </form>
 
-        <div className="mt-12 flex items-center justify-center gap-3 text-neutral-600">
+        {/* <div className="mt-12 flex items-center justify-center gap-3 text-neutral-600">
           <Mail size={20} />
           <p>または直接メールでのお問い合わせ: contact@example.com</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
