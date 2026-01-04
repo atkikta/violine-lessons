@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface HeaderProps {
   onNavigate: (section: string) => void;
@@ -8,6 +9,8 @@ interface HeaderProps {
 
 export function Header({ onNavigate, activeSection }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     { id: 'profile', label: '講師' },
@@ -16,8 +19,16 @@ export function Header({ onNavigate, activeSection }: HeaderProps) {
     { id: 'contact', label: 'お問い合わせ' },
   ];
 
-  const handleNavigate = (section: string) => {
-    onNavigate(section);
+  const handleNavigateClick = (section: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Delay scrolling slightly to allow the page to render
+      setTimeout(() => {
+        onNavigate(section);
+      }, 0);
+    } else {
+      onNavigate(section);
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -34,7 +45,7 @@ export function Header({ onNavigate, activeSection }: HeaderProps) {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => handleNavigate(item.id)}
+                onClick={() => handleNavigateClick(item.id)}
                 className={`transition-colors ${
                   activeSection === item.id
                     ? 'text-neutral-900'
@@ -61,7 +72,7 @@ export function Header({ onNavigate, activeSection }: HeaderProps) {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => handleNavigate(item.id)}
+                onClick={() => handleNavigateClick(item.id)}
                 className={`block w-full text-left py-3 transition-colors ${
                   activeSection === item.id
                     ? 'text-neutral-900'
