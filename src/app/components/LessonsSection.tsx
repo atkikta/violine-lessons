@@ -1,18 +1,21 @@
 import { Clock, MapPin, Users } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import LessonImage from "../../assets/images/lesson-gpt.png";
+import Otonowa1Image from "../../assets/images/otonowa1.png";
+import Otonowa2Image from "../../assets/images/otonowa2.jpg";
+import Otonowa3Image from "../../assets/images/otonowa3.png";
 
 const lessonPlans = [
   {
     id: 1,
-    title: '個人レッスン',
-    description: "弾きたい曲をていねいに仕上げていきます。オンラインも対応しております。",
+    title: '個人レッスン(オンラインも可)',
+    description: "弾きたい曲をていねいに仕上げていきます。年齢問いません。",
     price: '5,000円 / 1時間',
   },
   {
     id: 2,
-    title: 'オーケストラの弓づけ、指づかい相談レッスン',
-    description: 'アマチュアオーケストラ等で活動されている方向け。',
+    title: 'アマチュアオーケストラで活動されている方向け',
+    description: 'オーケストラの弓づけ、指づかい相談レッスン。',
     price: '5,000円 / 1時間',
   },
   {
@@ -96,6 +99,35 @@ export function LessonsSection() {
           <p className="text-neutral-700">
             ※ 体験レッスン（約60分 ¥1,000）も受け付けております。お気軽にお問い合わせください。
           </p>
+        </div>
+        <div className="mt-12 p-6 bg-neutral-50 rounded-lg">
+          <h3 className="mb-4">発表コンサート</h3>
+          <p className="text-neutral-700">
+            毎年夏にピアニスト 長尾洋史先生を講師にお迎えして室内楽セミナー(Otonowaコンサート)を実施しています。
+          </p>
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-lg">
+              <ImageWithFallback
+                src={Otonowa1Image}
+                alt="Seminar1"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-lg">
+              <ImageWithFallback
+                src={Otonowa2Image}
+                alt="Seminar2"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-lg">
+              <ImageWithFallback
+                src={Otonowa3Image}
+                alt="Seminar3"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
