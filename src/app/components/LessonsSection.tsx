@@ -1,6 +1,6 @@
 import { Clock, MapPin, Users } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import LessonImage from "../../assets/images/lesson-gpt.png";
+import LessonImage from "../../assets/images/lesson.jpg";
 import Otonowa1Image from "../../assets/images/otonowa1.png";
 import Otonowa2Image from "../../assets/images/otonowa2.jpg";
 import Otonowa3Image from "../../assets/images/otonowa3.png";
